@@ -1,0 +1,18 @@
+name: CS2 Weekly Reset Alert
+
+on:
+  schedule:
+    # Runs every Tuesday at 9 PM EST (which is 1 AM UTC Wednesday)
+    - cron: "0 1 * * 3"
+  workflow_dispatch: # lets you run manually for testing
+
+jobs:
+  send-alert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Discord Webhook
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d "{\"content\":\"🎯 CS2 weekly drop reset is LIVE!\"}" \
+          ${{ secrets.DISCORD_WEBHOOK }}
