@@ -2,8 +2,8 @@ name: CS2 Weekly Reset Alert
 
 on:
   schedule:
-    # Runs every Tuesday at 9 PM EST (which is 1 AM UTC Wednesday)
-    - cron: "0 13 * * 2"
+    # Runs every Tuesday at 19 UTC (5pm EST)
+    - cron: "0 19 * * 2"
   workflow_dispatch: # lets you run manually for testing
 
 jobs:
