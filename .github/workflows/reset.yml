@@ -14,5 +14,5 @@ jobs:
       - name: Send Discord Webhook
         run: |
           curl -H "Content-Type: application/json" \
-          -d "{\"content\":\"🎯 CS2 weekly drop reset is LIVE!\"}" \
+          -d "{\"content\":\"🎯 CS2 weekly drop reset is today at 9pm EST!\"}" \
           ${{ secrets.DISCORD_WEBHOOK }}
